@@ -10,10 +10,7 @@ public class EasyMethodPractices {
 
         System.out.println("String: \"" + s2 + "\" has " + upperCaseCounter(s2) + " upper case letters");
 
-
-
     }
-
     /*
     Create public static method which will take a String and counts the uppercase letters and returns it
     "1234 *&%^## TechGlobal" -->2
@@ -21,14 +18,12 @@ public class EasyMethodPractices {
     "TeChGloBal 1234 *&%^##" --> 4
      */
 
-
     /*
        Create a public static method which will takes a strings and return thr numbers of those Letters.
         */
 
     //"2860 south river road des plaines il"  <- future string --> 26
     //"1234 *&%^## TechGlobal" -->10
-
 
     public static int countLetters(String s) {
         int counter = 0;
