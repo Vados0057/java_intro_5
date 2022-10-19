@@ -2,8 +2,12 @@ package characterClass;
 
 public class EasyMethodPractices {
     public static void main(String[] args) {
+
+
         String s1 = "2860 south river road des plaines il";
         System.out.println("String: \"" + s1 + "\" has " + countLetters(s1) + " letters");
+
+
         /*
         Create a public static method which will takes a strings and return thr numbers of those Letters.
          */
