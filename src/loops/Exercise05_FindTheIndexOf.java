@@ -7,15 +7,16 @@ public class Exercise05_FindTheIndexOf {
         "Banana", 'a' -> 1
         "Banana", 't' -> -1
          */
+
 //        System.out.println("1. " + findFirstIndexOf("I love Java", 'a'));
 //        System.out.println("2. " + findFirstIndexOf("Banana", 'a'));
 //        System.out.println("3. " + findFirstIndexOf("Banana", 't'));
 
-
-        System.out.println(clearWord("I love Java", "av"));
+        //System.out.println(clearWord("I love Java", "av"));
+        System.out.println(frontAndBack("abcxxxabc"));
+        System.out.println(frontAndBack("wordxxxword"));
 
     }
-
     /*
     Create a public static method named as findFirstIndexOf() and it will take a String,
     and a char then it will return the index of the first occurrence of the char. If the
@@ -75,17 +76,17 @@ public class Exercise05_FindTheIndexOf {
         return newS;
     }
 
-    /*
-Create a public static method named as clearWord() and it will take two Strings,
-then it will return the String without the given second String. If the second
-String is bigger than the first one return empty.
+            /*
+        Create a public static method named as clearWord() and it will take two Strings,
+        then it will return the String without the given second String. If the second
+        String is bigger than the first one return empty.
 
-Example:
+        Example:
 
-"I love Java", "av" ->  "I love Ja"
-"Banana", 'an' -> "Ba"
-"Banana", 'bananananaa' -> ""
- */
+        "I love Java", "av" ->  "I love Ja"
+        "Banana", 'an' -> "Ba"
+        "Banana", 'bananananaa' -> ""
+         */
 
 
     public static String clearWord(String s, String s1) {
@@ -102,4 +103,29 @@ Example:
         }
         return newS;
     }
-}
+
+    /*
+    Create a public static method named as frontAndBack() and it will take a String,
+    then it will return a String which has the most common words from start and end.
+
+    Examples:
+
+    "abcxxxabc" -> "abc"
+    "abxxxab" -> "ab"
+    "axxxa" -> "a"
+    "wordxxxword" -> "word"
+     */
+
+    public static String frontAndBack(String s){
+        String str = "";
+        for (int i = 0; i < s.length()/2; i++) {
+            if (s.endsWith(s.substring(0,i+1))){
+                str = s.substring(0, i+1);
+            }
+            }
+        return str;
+        }
+
+
+
+    }
