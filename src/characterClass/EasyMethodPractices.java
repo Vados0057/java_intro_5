@@ -63,33 +63,29 @@ public class EasyMethodPractices {
     x amount of special characters
      */
 
-    public static void printStringAttributes(String s) {
-        int upperC = 0, lowerC = 0, letterC = 0, digitC = 0, spaceC = 0, specialC = 0;
-
+    public static void printStringAttributes(String s){
+        int counterOfUppercase = 0;
+        int counterOfLowerCases = 0;
+        int counterOfLetters = 0;
+        int counterOfDigits = 0;
+        int counterOfSpaces = 0;
+        int counterOfSpecialCharacters = 0;
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
-            if (Character.isLetter(c)) {
-                letterC++;
-                if (Character.isUpperCase(c)) {
-                    upperC++;
-                } else {
-                    lowerC++;
-                }
+            if (Character.isUpperCase(c)) {
+                counterOfUppercase++;
+                if (Character.isLowerCase(c))
+                    counterOfLowerCases++;
+                if (Character.isLetter(c))
+                    counterOfLetters++;
             } else if (Character.isDigit(c)) {
-                digitC++;
+                counterOfDigits++;
             } else if (Character.isWhitespace(c)) {
-                spaceC++;
+                counterOfSpaces++;
             } else {
-                specialC++;
+                counterOfSpecialCharacters++;
             }
         }
-
-        System.out.println("Given \"" + s + "\"has:\n"
-                + upperC + " amount of upper cases\n"
-                + lowerC + " amount of lower cases\n"
-                + letterC + " amount of letters\n"
-                + digitC + " amount of digits\n"
-                + spaceC + " amount of spaces\n"
-                + specialC + " amount of special characters.");
+        System.out.println();
     }
 }
