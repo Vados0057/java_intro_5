@@ -32,8 +32,5 @@ public class UnderstandingArrays {
         int[] ages = {21,23,25}; //< 21 - 0, 23 - 1, 25 - 2; <----------^
         System.out.println(ages[2]); // INDEX STARTS WITH 0so that's why|
 
-
-
-
     }
 }

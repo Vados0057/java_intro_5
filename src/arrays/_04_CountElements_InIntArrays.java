@@ -4,7 +4,6 @@ public class _04_CountElements_InIntArrays {
     public static void main(String[] args) {
 
 
-        int[] numbers = {-1, 3, 0, 5, -7, 10, 8, 0 , 10, 0};
 
         /*
         negatives: 2
@@ -27,19 +26,32 @@ public class _04_CountElements_InIntArrays {
         closest numbers to 9(Take the smallest): 8
          */
 
+        int[] numbers = {-1, 3, 0, 5, -7, 10, 8, 0 , 10, 0};
+
         int negatives = 0;
-        int postives = 0, neutral = 0, countEven = 0;
+        int postives = 0, neutral = 0, countEven = 0, countOdd = 0, maxNum = 0, minNum = 0,sumOfNum = 0,
+                averageNum = 0;
 
         for (int number : numbers) {
             if (number<0) negatives++;
-            else if (number>0) postives++;
-            else if (number == 0) neutral++;
-            else if (number / number == 1 ) countEven++;
+            {
+            if (number > 0) postives++;
+            }
+            //else if (number == 0) neutral++;
+             if (number % 2 == 0) countEven++;
+             if (number % 2 != 0) countOdd++;
+
         }
         System.out.println("Negative count is = " + negatives);
         System.out.println("Positive count is = " + postives);
-        System.out.println("Neutral count is = " + neutral);
-        System.out.println("Even count is = " + countEven);
+        //System.out.println("Neutral count is = " + neutral);
+        System.out.println("Even numbers count is = " + countEven);
+        System.out.println("Odd numbers count is = " + countOdd);
+
+
 
     }
-}
+        }
+
+
+
