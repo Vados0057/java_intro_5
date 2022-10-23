@@ -16,7 +16,7 @@ public class _01_StringArray {
         System.out.println(countries[0]); //null
         System.out.println(countries[1]); //spain
 
-        // 4. Printing an array.
+        // 4. !!!!!!!!!!!!!!!!!!!  PRINTING AN ARRAY !!!!!!!!!!!!!!!!!!!!!!!!!
         System.out.println(Arrays.toString(countries)); //[null, Spain, null]
 
         /*
@@ -49,4 +49,5 @@ public class _01_StringArray {
 //        System.out.println(countries[1]);
 //        System.out.println(countries[2]);
 
+    }
 }
