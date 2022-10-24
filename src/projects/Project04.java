@@ -8,8 +8,9 @@ import java.util.Scanner;
 public class Project04 {
     public static void main(String[] args) {
 
+        Scanner input = new Scanner(System.in);
 
-       //TASK 1
+        //TASK 1
         System.out.println("\n~~~~~~~~~~~~~~~TASK 1~~~~~~~~~~~~~~~");
 
         /*
@@ -22,48 +23,46 @@ public class Project04 {
         String newStr = "";
         if (str.length() < 8) System.out.println("This String does not have 8 characters");
         else {
-           newStr = str.substring(str.length()/2+1) + str.substring(str.length()/2-1, str.length()/2+1) +
-                   str.substring(0,str.length()/2-1);
+            newStr = str.substring(str.length() / 2 + 1) + str.substring(str.length() / 2 - 1, str.length() / 2 + 1) +
+                    str.substring(0, str.length() / 2 - 1);
             System.out.println(newStr);
         }
 
         //TASK 2
         System.out.println("\n~~~~~~~~~~~~~~~TASK 2~~~~~~~~~~~~~~~");
 
-       Scanner input = new Scanner(System.in);
         System.out.println("Please enter a sentence");
         str = input.nextLine();
         str = str.trim();
-        if (str.contains(" ")){
+        if (str.contains(" ")) {
 
             String firstPart = str.substring(0, str.indexOf(" "));
-            String middlePart = str.substring(str.indexOf(' '), str.lastIndexOf(' ')+1);
-            String lastPart = str.substring(str.lastIndexOf(' ')+ 1);
+            String middlePart = str.substring(str.indexOf(' '), str.lastIndexOf(' ') + 1);
+            String lastPart = str.substring(str.lastIndexOf(' ') + 1);
 
             System.out.println(lastPart + middlePart + firstPart);
-        }
-        else System.out.println("This sentence does not have 2 or more words to swap");
-
+        } else System.out.println("This sentence does not have 2 or more words to swap");
 
         //TASK 3
         System.out.println("\n~~~~~~~~~~~~~~~TASK 3~~~~~~~~~~~~~~~");
 
         String str1 = "These books are so stupid";
         String str2 = "I like idiot behaviors";
-        String str3 = " had some stupid t-shirts in the past and also some idiot look shoes";
+        String str3 = "I had some stupid t-shirts in the past and also some idiot look shoes";
 
         System.out.println(str1.replace("stupid", "nice").replace("idiot", "nice"));
         System.out.println(str2.replace("stupid", "nice").replace("idiot", "nice"));
         System.out.println(str3.replace("stupid", "nice").replace("idiot", "nice"));
 
-
         //Task4
         System.out.println("\n~~~~~~~~~~~~~~~TASK 4~~~~~~~~~~~~~~~\n");
+
         String name = ScannerHelper.getAName();
-        if (name.length() > 2){
-            if (name.length() % 2 == 0) System.out.println(name.substring(name.length()/2 -1, name.length() /2 +1));
-            else System.out.println(name.substring(name.charAt(name.length()/2)));
-        }else System.out.println("Invalid Input!!!");
+        if (name.length() > 2) {
+            if (name.length() % 2 == 0)
+                System.out.println(name.substring(name.length() / 2 - 1, name.length() / 2 + 1));
+            else System.out.println(name.substring(name.charAt(name.length() / 2)));
+        } else System.out.println("Invalid Input!!!");
 
         //Task5
         System.out.println("\n~~~~~~~~~~~~~~~TASK 5~~~~~~~~~~~~~~~\n");
@@ -71,7 +70,7 @@ public class Project04 {
         System.out.println("Please enter a country");
         String country = input.nextLine();
         if (country.length() > 5)
-            System.out.println(country.substring(2,country.length()-2));
+            System.out.println(country.substring(2, country.length() - 2));
         else System.out.println("Invalid input!!!");
 
         //Task6
@@ -79,13 +78,12 @@ public class Project04 {
 
         String address = ScannerHelper.getAnAddress();
 
-        address = address.replace('a', '*').replace('A','*').
-                replace('e','#').replace('E', '#').
-                replace('i','+').replace('I','+').
-                replace('u','$').replace('U','$').
-                replace('o','@').replace('O', '@');
+        address = address.replace('a', '*').replace('A', '*').
+                replace('e', '#').replace('E', '#').
+                replace('i', '+').replace('I', '+').
+                replace('u', '$').replace('U', '$').
+                replace('o', '@').replace('O', '@');
         System.out.println(address);
-
 
         //Task7
         System.out.println("\n~~~~~~~~~~~~~~~TASK 7~~~~~~~~~~~~~~~\n");
@@ -95,38 +93,69 @@ public class Project04 {
         System.out.println(random1);
         System.out.println(random2);
         String sequence = "";
-        for (int i = Math.min(random1,random2); i <= Math.max(random1, random2); i++){
+        for (int i = Math.min(random1, random2); i <= Math.max(random1, random2); i++) {
             if (i % 5 != 0) sequence += i + " - ";
         }
-        System.out.println(sequence.substring(0,sequence.length() - 3));
+        System.out.println(sequence.substring(0, sequence.length() - 3));
 
         //Task8
         System.out.println("\n~~~~~~~~~~~~~~~TASK 8~~~~~~~~~~~~~~~\n");
 
-        System.out.println("Please enter sentence");
-    String sentence1 = input.nextLine();
-    int count = 0;
-    for (int i = 0; i < sentence1.length(); i++){
-        if (sentence1.charAt(i) == ' ') count++;
-    } if (count > 0) System.out.println("This sentence has " + count + " words.");
-    else System.out.println("This sentence does not have multiple words");
+        System.out.println("Please enter a sentence");
+        String newSentence = input.nextLine();
+        int count = 0;
+        for (int i = 0; i < newSentence.length(); i++) {
+            if (newSentence.charAt(i) == ' ')
+                count++;
+        }
+        if (count > 0)
+            System.out.println("This sentence has " + (count + 1) + " words.");
+        else
+            System.out.println("This sentence does not have multiple words");
+
+        //Task9
+        System.out.println("\n~~~~~~~~~~~~~~~TASK 9~~~~~~~~~~~~~~~\n");
+
+        int num = ScannerHelper.getANumber();
+        System.out.println(" Positive number is " + num);
+        for (int i = 1; i <= num; i++) {
+            if (i % 2 == 0 && i % 3 == 0) System.out.println("FooBar");
+            else if (i % 2 == 0) System.out.println("Foo");
+            else if (i % 3 == 0) System.out.println("Bar");
+            else System.out.println(i);
+        }
 
 
-    //Task 10
-        System.out.println("task 10");
+        //Task 10
+        System.out.println("\n~~~~~~~~~~~~~~~TASK 10~~~~~~~~~~~~~~~\n");
 
+        String strin = ScannerHelper.getAString();
         String rev = "";
-        String strin = "";
-        ScannerHelper.getAString();
 
-        for (int i = strin.length()-1; i >= 0; i--) {
-            rev += str.charAt(i);
-        }if (str.equals(rev)) System.out.println(strin + " is palindrome");
-        else System.out.println(strin + " is not palindrome");
-
+            for (int i1 = strin.length()-1; i1 >= 0; i1--) {
+                rev += strin.charAt(i1);
+            }
+        if (strin.equals(rev)){
+            System.out.println(strin + " is palindrome");
+        }
+        else{
+            System.out.println(strin + " is not palindrome");
+        }
 
         //Task 11
-        
-    }
-    }
+        System.out.println("\n~~~~~~~~~~~~~~~TASK 11~~~~~~~~~~~~~~~\n");
 
+        System.out.println("Please enter a sentence");
+        String sentence = input.nextLine();
+        sentence = sentence.toLowerCase();
+        int counter = 0;
+        if (sentence.length() > 0){
+            for (int i = 0; i < sentence.length(); i++) {
+                if (sentence.charAt(i) == 'a') counter++;
+            }
+            System.out.println("This sentence has " + counter + " a or A letters");
+        }
+        else System.out.println("This sentence does not have any characters");
+
+    }
+}
