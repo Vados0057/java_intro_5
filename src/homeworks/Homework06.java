@@ -100,16 +100,21 @@ public class Homework06 {
         System.out.println("Digits = " + digitCounter);
         System.out.println("Special characters = " + charCounter);
 
-//        //TASK 9
-//        System.out.println("\n~~~~~~~~~~~~TASK 9~~~~~~~~~~~~\n");
-//
-//        String[] words = {"Pen", "notebook", "Book", "paper", "bag", "pencil", "Ruler"};
-//        System.out.println(Arrays.toString(words));
-//
-//        int upperCase = 0, lowerCase = 0, startsWithBP = 0,hasBookOrPen = 0;
-//
-//        for (String word : words) {
-//            if (word.)
+        //TASK 9
+        System.out.println("\n~~~~~~~~~~~~TASK 9~~~~~~~~~~~~\n");
+
+        String[] words = {"Pen", "notebook", "Book", "paper", "bag", "pencil", "Ruler"};
+        System.out.println(Arrays.toString(words));
+        int upper = 0, lower = 0, startsWithBOrP = 0, containsBookOrPen = 0;
+        for (int i = 0; i < words.length; i++) {
+            }
+
+        System.out.println(upper);
+        System.out.println(lower);
+        System.out.println(startsWithBOrP);
+        System.out.println(containsBookOrPen);
+
+
 
         //TASK 10
         System.out.println("\n~~~~~~~~~~~~TASK 10~~~~~~~~~~~~\n");

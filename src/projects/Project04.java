@@ -3,6 +3,7 @@ package projects;
 import utilities.RandomNumberGenerator;
 import utilities.ScannerHelper;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Project04 {
@@ -32,8 +33,7 @@ public class Project04 {
         System.out.println("\n~~~~~~~~~~~~~~~TASK 2~~~~~~~~~~~~~~~");
 
         System.out.println("Please enter a sentence");
-        str = input.nextLine();
-        str = str.trim();
+        str = input.nextLine().trim();
         if (str.contains(" ")) {
 
             String firstPart = str.substring(0, str.indexOf(" "));
@@ -76,6 +76,16 @@ public class Project04 {
         //Task6
         System.out.println("\n~~~~~~~~~~~~~~~TASK 6~~~~~~~~~~~~~~~\n");
 
+        /*
+                Write a program that asks user to enter their full address.
+        Replace all letter ‘a’ or ‘A’ with ‘*’
+        Replace all letter ‘e’ or ‘E’ with ‘#’
+        Replace all letter ‘i’ or ‘I’ with ‘+’
+        Replace all letter ‘u’ or ‘U’ with ‘$’
+        Replace all letter ‘o’ or ‘O’ with ‘@’
+        Then, print result after replacements
+         */
+
         String address = ScannerHelper.getAnAddress();
 
         address = address.replace('a', '*').replace('A', '*').
@@ -88,6 +98,12 @@ public class Project04 {
         //Task7
         System.out.println("\n~~~~~~~~~~~~~~~TASK 7~~~~~~~~~~~~~~~\n");
 
+        /*
+            Write a program that generates 2 random numbers between 0 and 25 (0 and
+        25 are included), Then print all numbers between 2 random numbers that
+        cannot be divided by 5 in ascending order.
+         */
+
         int random1 = RandomNumberGenerator.getARandomNumber(0, 25);
         int random2 = RandomNumberGenerator.getARandomNumber(0, 25);
         System.out.println(random1);
@@ -98,8 +114,39 @@ public class Project04 {
         }
         System.out.println(sequence.substring(0, sequence.length() - 3));
 
+        /**
+         *********  OTHER SOLUTION  *********
+         */
+
+        int num7A = RandomNumberGenerator.getARandomNumber(0,25);
+        int num7B = RandomNumberGenerator.getARandomNumber(0,25);
+
+        String ans7 = "";
+
+        for (int i = Math.min(num7A,num7B); i <= Math.max(num7A,num7B); i++) {
+            if (i %5 != 0) {
+                ans7 += i;
+                if(i + 1 == Math.max(num7A,num7B) && i % 5 != 0) break;
+                else {
+
+                }
+            }
+        }
+        System.out.println("Random number 1 = " + num7A);
+        System.out.println("Random number 2 = " + num7B);
+        System.out.println(ans7);
+
+
         //Task8
         System.out.println("\n~~~~~~~~~~~~~~~TASK 8~~~~~~~~~~~~~~~\n");
+
+        /*
+            Write a program that asks user to enter a sentence as a String, and count
+        how many words that sentence has, and print it with given below message.
+        NOTE: Write a program that handles any String
+        NOTE: First check if the given sentence has 2 words at least. If not, then just
+        print “This sentence does not have multiple words”
+         */
 
         System.out.println("Please enter a sentence");
         String newSentence = input.nextLine();
@@ -113,8 +160,28 @@ public class Project04 {
         else
             System.out.println("This sentence does not have multiple words");
 
+        /**
+         *********  OTHER SOLUTION  *********
+         */
+        System.out.println("please enter a String: ");
+        String other8 = input.nextLine().trim(); // I love animals [I], [love], [animals]
+        input.nextLine();
+        if (other8.contains(" ")) {
+            String[] array8 = other8.split(" ");
+            System.out.println("This sentence has " + array8.length + " words.");
+        }else {
+            System.out.println("this sentence does not have multiple words");
+        }
+
         //Task9
         System.out.println("\n~~~~~~~~~~~~~~~TASK 9~~~~~~~~~~~~~~~\n");
+
+        /*
+                Write a program that asks user to enter a positive number.
+        Print all the number starting from 1 to given number. But, print “Foo” for the
+        numbers divided by 2, “Bar” for the numbers divided by 3 and “FooBar” for
+        the numbers divided by both 2 and 3.
+         */
 
         int num = ScannerHelper.getANumber();
         System.out.println(" Positive number is " + num);
@@ -129,6 +196,12 @@ public class Project04 {
         //Task 10
         System.out.println("\n~~~~~~~~~~~~~~~TASK 10~~~~~~~~~~~~~~~\n");
 
+        /*
+            Write a program that asks user to enter a word, and check if it is palindrome or not.
+        Palindrome: It is a word that is read the same backward as forward
+        •EXAMPLE: kayak, civic, madam
+         */
+
         String strin = ScannerHelper.getAString();
         String rev = "";
 
@@ -142,8 +215,33 @@ public class Project04 {
             System.out.println(strin + " is not palindrome");
         }
 
+        /**
+         *********  OTHER SOLUTION  *********
+         */
+
+        System.out.println("Please enter a string: ");
+        String other10 = input.nextLine();
+        boolean isPalindrome = true;
+        if (other10.length() < 1) System.out.println("This word does not have 1 or more characters");
+        else {
+            for( int i = 0, j = other10.length() - 1; i < other10.length() / 2; i++, j--){
+                if (other10.charAt(i) == other10.charAt(j)){
+                    isPalindrome = false;
+                    break;
+                }
+            }
+            if (isPalindrome) System.out.println("This word is a palindrome.");
+            else System.out.println("This word is a palindrome.");
+        }
+
         //Task 11
         System.out.println("\n~~~~~~~~~~~~~~~TASK 11~~~~~~~~~~~~~~~\n");
+
+        /*
+            Write a program that asks user to enter a sentence as a String and count
+        how many a or A letters that sentence has and print it with given below
+        message.
+         */
 
         System.out.println("Please enter a sentence");
         String sentence = input.nextLine();
@@ -155,7 +253,22 @@ public class Project04 {
             }
             System.out.println("This sentence has " + counter + " a or A letters");
         }
+
         else System.out.println("This sentence does not have any characters");
 
+        /**
+             *********  OTHER SOLUTION  *********
+         */
+
+        System.out.println("Please enter a string");
+        String other = input.nextLine();
+        int counterOfA = 0;
+        if (other.length() == 0) System.out.println("This sentence does not have any characters.");
+        else {
+            for (int i = 0; i < other.length(); i++) {
+                if (other.charAt(i) == 'a' || other.charAt(i) == 'A') counterOfA++;
+            }
+        }
+        System.out.println("This sentence ha " + counterOfA + " a or A letters.");
     }
 }
