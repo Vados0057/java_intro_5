@@ -24,7 +24,8 @@ public class Project04 {
         String newStr = "";
         if (str.length() < 8) System.out.println("This String does not have 8 characters");
         else {
-            newStr = str.substring(str.length() / 2 + 1) + str.substring(str.length() / 2 - 1, str.length() / 2 + 1) +
+            newStr = str.substring(str.length() / 2 + 1) + str.substring(str.length() / 2 - 1,
+                    str.length() / 2 + 1) +
                     str.substring(0, str.length() / 2 - 1);
             System.out.println(newStr);
         }
