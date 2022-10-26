@@ -75,7 +75,6 @@ public class Homework06 {
             System.out.println(d);
         }
 
-
         //TASK 8
         System.out.println("\n~~~~~~~~~~~~TASK 8~~~~~~~~~~~~\n");
 
@@ -104,10 +103,8 @@ public class Homework06 {
         System.out.println("\n~~~~~~~~~~~~TASK 9~~~~~~~~~~~~\n");
 
         String[] words = {"Pen", "notebook", "Book", "paper", "bag", "pencil", "Ruler"};
-        // first
         System.out.println(Arrays.toString(words));
 
-        // second
         int upper = 0, lower = 0, startsWithBOrP = 0, containsBookOrPen = 0;
         for (String word : words) {
             // isuppercase -> takes char: returns boolean
@@ -121,14 +118,13 @@ public class Homework06 {
             if (word.toLowerCase().contains("pen") || word.toLowerCase().contains("book")){
                 containsBookOrPen++;
             }
+            if (word.toLowerCase().startsWith("b") || word.toLowerCase().startsWith("p"))startsWithBOrP++;
         }
 
-        System.out.println(upper);
-        System.out.println(lower);
-        System.out.println(startsWithBOrP);
-        System.out.println(containsBookOrPen);
-
-
+        System.out.println("Elements starts with uppercase = " + upper);
+        System.out.println("Elements starts with lowercase = " + lower);
+        System.out.println("Elements starting with B or P = " + startsWithBOrP);
+        System.out.println("Elements having \"book\" or \"pen\"" + containsBookOrPen);
 
         //TASK 10
         System.out.println("\n~~~~~~~~~~~~TASK 10~~~~~~~~~~~~\n");
@@ -159,16 +155,11 @@ public class Homework06 {
 //        thirdArray[0] = Math.max(firsArray[0],secondArray[0]);
 //        System.out.println(thirdArray[0]);
 
-        for (int i = 0; i <= thirdArray.length; i++) {
+        for (int i = 0; i < 5; i++) {
             thirdArray[i] = Math.max(firsArray[i], secondArray[i]);
         }
 
         System.out.println(Arrays.toString(thirdArray));
-
-
-
     }
-
-
-    }
+}
 
