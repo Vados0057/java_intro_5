@@ -59,6 +59,7 @@ public class Homework06 {
         System.out.println("\n~~~~~~~~~~~~TASK 6~~~~~~~~~~~~\n");
 
         String[] cats = {"Garfield", "Tom", "Sylvester", "Azrael",};
+        System.out.println(Arrays.toString(cats));
         boolean hasCats = false;
         for (String cat : cats) {
             if (cat.equals("Garfield") && cat.equals("Felix")) hasCats = true;
