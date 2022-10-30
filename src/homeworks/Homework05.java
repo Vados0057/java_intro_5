@@ -114,6 +114,5 @@ public class Homework05 {
             if (userGivenName.toLowerCase().charAt(0) != 'j');
         }while (userGivenName.toLowerCase().charAt(0) != 'j');
             System.out.println("End of the program");
-
     }
 }
