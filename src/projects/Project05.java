@@ -1,8 +1,6 @@
 package projects;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 
 public class Project05 {
     public static void main(String[] args) {
@@ -76,22 +74,23 @@ public class Project05 {
         */
     public static void findSecondGreatestAndSmallestWithSort(int[] numbers) {
 
-        System.out.println(Arrays.toString(numbers));
-        Arrays.sort(numbers);
-        int max = Integer.MIN_VALUE;
-        int min = Integer.MAX_VALUE;
-        int secondMax = 0;
-        int secondMin = 0;
 
-        for (int n : numbers) {
-            if (secondMax > n && n !=max){
-                secondMax = n;
-            }if (secondMin < n && n != min){
-                secondMin = n;
+        Arrays.sort(numbers);
+        int  secondMax = Integer.MIN_VALUE;
+        int  secondMin = Integer.MAX_VALUE;
+
+        int max = numbers[numbers.length-1];
+        int min = numbers[0];
+
+        for (int number : numbers) {
+            if (number < secondMin && number != min){
+                secondMin = number;
+            }if (number > secondMax && number != max){
+                secondMax = number;
             }
         }
-        System.out.println("Second Greatest number = " + secondMax);
-        System.out.println("Second Smallest number = " + secondMin);
+        System.out.println(secondMin);
+        System.out.println(secondMax);
     }
 
     //Task 4
@@ -133,9 +132,7 @@ public class Project05 {
         System.out.println("Second Greatest  = " + secondMax);
     }
 
-
     //Task 5
-
          /*
             Write a method that takes a String array. Find all duplicated elements and
         print them.
@@ -149,12 +146,12 @@ public class Project05 {
                 if (counter.contains(str[i] + "")) {
                     break;
                 }
-                if (str[i] == str[j]) {
-                    counter += str[j] + "\n";
+                if (str[i].equals(str[j])) {
+                    counter += str[i];
+                    System.out.println(str[i]);
                 }
             }
         }
-        System.out.println(counter);
     }
 
     //Task 6
@@ -165,14 +162,19 @@ public class Project05 {
     public static void findMostRepeatedElementInAnArray(String[] str) {
 
         String check = "";
-        int count1 = 0;
+        int howMany = 0;
+        int mostRepeated = 0;
 
         for (int s = 0; s < str.length; s++) {
-
-            for (int i = 0; i < str.length; i++) {
-
+            for (int i = s + 1; i < str.length; i++) {
+                if (str[s].equals(str[i])) howMany++;
             }
-
+            if (howMany > mostRepeated){
+                mostRepeated = howMany;
+                check = str[s];
+            }
+            howMany = 0;
         }
+        System.out.println(check);
     }
 }
