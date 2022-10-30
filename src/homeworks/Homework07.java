@@ -16,6 +16,8 @@ public class Homework07 {
         System.out.println(numbers.get(2));
         System.out.println(numbers);
 
+
+
         System.out.println("\n------------Task-2------------\n");
 
         ArrayList<String> colors = new ArrayList<>(Arrays.asList("Blue", "Brown", "Red", "White", "Black", "Purple"));
@@ -25,12 +27,16 @@ public class Homework07 {
         System.out.println(colors.get(5));
         System.out.println(colors);
 
+
+
         System.out.println("\n------------Task-3------------\n");
 
         ArrayList<Integer> numbers2 = new ArrayList<>(Arrays.asList(23, -34, -56, 0, 89, 100));
         System.out.println(numbers2);
         Collections.sort(numbers2);
         System.out.println(numbers2);
+
+
 
         System.out.println("\n------------Task-4------------\n");
 
@@ -39,6 +45,8 @@ public class Homework07 {
         Collections.sort(countries);
         System.out.println(countries);
 
+
+
         System.out.println("\n------------Task-5------------\n");
 
         ArrayList<String> heroes = new ArrayList<>(Arrays.asList("Spider Man", "Iron Man",
@@ -46,6 +54,8 @@ public class Homework07 {
 
         System.out.println(heroes);
         System.out.println(heroes.contains("Wolwerine"));
+
+
 
 
         System.out.println("\n------------Task-6------------\n");
@@ -57,6 +67,8 @@ public class Homework07 {
         System.out.println(superHeroes.contains("Hulk") && superHeroes.contains("Iron Man"));
 
 
+
+
         System.out.println("\n------------Task-7------------\n");
 
         ArrayList<Character> chars = new ArrayList<>(Arrays.asList('A', 'x', '$', '%', '9', '*', '+', 'F', 'G'));
@@ -65,6 +77,9 @@ public class Homework07 {
         for (Character aChar : chars) {
             System.out.println(aChar);
         }
+
+
+
 
         System.out.println("\n------------Task-8------------\n");
 
@@ -80,6 +95,9 @@ public class Homework07 {
         }
         System.out.println(mCounter);
         System.out.println(counterOfAAndE);
+
+
+
 
         System.out.println("\n------------Task-9------------\n");
 
@@ -101,6 +119,10 @@ public class Homework07 {
         System.out.println("Elements having P or p = " + hasP);
         System.out.println("Elements starting or ending with P or p = " + endWithP);
 
+
+
+
+
         System.out.println("\n------------Task-10------------\n");
 
         ArrayList<Integer> numbersTask10 = new ArrayList<>(Arrays.asList(3, 5, 7, 10, 0, 20, 17, 10, 23, 56, 78));
@@ -116,11 +138,5 @@ public class Homework07 {
         System.out.println("Elements that are even and greater than 15 =" + evenMore15);
         System.out.println("Elements that are odd and less than 20 = " + oddLess20);
         System.out.println("Elements that are less than 15 or greater than 50 = " + less15Greater50);
-
-
-
-
-
-
     }
 }
