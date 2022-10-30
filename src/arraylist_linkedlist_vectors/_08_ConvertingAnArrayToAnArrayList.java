@@ -29,5 +29,6 @@ public class _08_ConvertingAnArrayToAnArrayList {
 
         Collections.addAll(numbers, arr3);
         System.out.println(numbers); // [1, 2, 2, 7, 10]
+
     }
 }
