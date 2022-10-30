@@ -2,6 +2,7 @@ package projects;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
 public class Project05 {
     public static void main(String[] args) {
@@ -164,7 +165,8 @@ public class Project05 {
     public static void findMostRepeatedElementInAnArray(String[] str) {
 
         String check = "";
-        int max = 0;
+        int count1 = 0;
+
         for (int s = 0; s < str.length; s++) {
 
             for (int i = 0; i < str.length; i++) {
