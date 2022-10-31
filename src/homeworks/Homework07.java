@@ -63,8 +63,8 @@ public class Homework07 {
         ArrayList<String> superHeroes = new ArrayList<>(Arrays.asList("Hulk", "Black Widow",
                 "Captain America", "Iron Man"));
 
-        System.out.println(superHeroes);
-        System.out.println(superHeroes.contains("Hulk") && superHeroes.contains("Iron Man"));
+        ArrayList<String> someHeroes = new ArrayList<>(Arrays.asList("Hulk" , "Iron Man"));
+        System.out.println(superHeroes.containsAll(someHeroes));
 
 
 
