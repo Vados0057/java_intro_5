@@ -156,7 +156,7 @@ public class Homework06 {
 //        thirdArray[0] = Math.max(firsArray[0],secondArray[0]);
 //        System.out.println(thirdArray[0]);
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < firsArray.length; i++) {
             thirdArray[i] = Math.max(firsArray[i], secondArray[i]);
         }
 

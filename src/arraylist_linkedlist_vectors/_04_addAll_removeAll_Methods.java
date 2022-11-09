@@ -35,5 +35,6 @@ public class _04_addAll_removeAll_Methods {
         group1Students.add("Messi");
         System.out.println(allStudents.removeAll(group1Students));//true
         System.out.println(allStudents);
+
     }
 }

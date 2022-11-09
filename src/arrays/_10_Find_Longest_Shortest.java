@@ -4,7 +4,11 @@ public class _10_Find_Longest_Shortest {
 
     public static void main(String[] args) {
         String[] colors = {"red", "blue", "yellow", "white"};
+
         printLongestShortest(colors);
+
+        String[] strings = new String[2];
+        System.out.println(strings);
     }
 
     /*

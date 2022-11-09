@@ -170,8 +170,9 @@ public class Project05 {
                 if (str[s].equals(str[i])) howMany++;
             }
             if (howMany > mostRepeated){
-                mostRepeated = howMany;
+
                 check = str[s];
+                mostRepeated = howMany;
             }
             howMany = 0;
         }

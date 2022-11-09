@@ -15,7 +15,6 @@ public class _01_StringArray {
         // 3. Print a specific index from an array
         System.out.println(countries[0]); //null
         System.out.println(countries[1]); //spain
-
         // 4. !!!!!!!!!!!!!!!!!!!  PRINTING AN ARRAY !!!!!!!!!!!!!!!!!!!!!!!!!
         System.out.println(Arrays.toString(countries)); //[null, Spain, null]
 
