@@ -1,5 +1,7 @@
 package regex;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.regex.Pattern;
 
 public class Exercises {
@@ -37,6 +39,40 @@ public class Exercises {
                             IF we just need to replace some words with something else, we can
                             use replaceAll() method.
                           */
+
+        String exercise = " abc 123 $#^ ";
+        System.out.println(exercise.replaceAll("[^\\w]", ""));
+
+        String name = "John Doe";
+        System.out.println(Pattern.matches("[A-Z]{1}[a-z]+ [A-Z]{1}[a-z]+", name));
+
+
+
+        /*
+                        Assume you are given a String that contains Letters and numbers
+                Using REGEX, print out 2 Arrays, one with the letters of the string and 1 with
+                the numbers
+                TestData1:
+                String str = “A1b2C3#”;
+                Program:
+                [A, b, C]
+                [1, 2, 3]
+                TestData2:
+                String str = “%ABC123#”;
+                Program:
+                [A, B, C]
+                [1, 2, 3]
+                TestData3:
+                String str = “abc”;
+                Program:
+                [a, b, c]
+                []
+         */
+        String str1 = "A1b2C3#";
+        String[] str2 = str1.split("[0-9\\W]");
+        System.out.println(Arrays.toString(str2));
+        String[] str3 = str.split("[\\W]");
+        System.out.println(Arrays.toString(str3));
 
     }
 }
