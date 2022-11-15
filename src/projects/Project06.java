@@ -107,5 +107,6 @@ public class Project06 {
 
     public static boolean isEmailFormatValid(String email){
         return Pattern.matches("[\\w]{2,}@[\\w]{2,}\\.[\\w]{2,}", email);
+        //git test
     }
 }
