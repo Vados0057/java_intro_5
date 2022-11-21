@@ -8,7 +8,7 @@ public class Homework09 {
 
 
         System.out.println("\n---------Task 1--------------\n");
-        /*
+                /*
                 Write a program to find the first duplicated number in an int array
         It should print “There is no duplicates” if there are no duplicate
         elements.
@@ -22,7 +22,16 @@ public class Homework09 {
 
         int[] numbers = {-4, 0, -7, 0, 5, 10, 45, 45};
 
-
+        boolean isFound = false;
+        int task1 = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            for (int j = i + 1; j < numbers.length; j++) {
+                if (numbers[i] == numbers[j] && !isFound) task1 += numbers[j];
+                isFound = true;
+                break;
+            }
+        }
+        System.out.println(isFound ? "First duplicate number : " + task1 : "There is no duplicates");
 
 
         System.out.println("\n---------Task 2--------------\n");
@@ -38,10 +47,22 @@ public class Homework09 {
             Expected output 1:
             Z
              */
-        String[] words = {"Z", "abc", "z", "123", "#" };
 
+        String[] words = {"b", "ama","B","s","Ama"};
 
+        isFound = false;
+        String task2 = "";
 
+        for (int i = 0; i < words.length; i++) {
+            for (int j = i + 1; j < words.length; j++) {
+                if (words[i].toLowerCase().equals(words[j].toLowerCase()) && !isFound) {
+                    task2 = words[i];
+                    isFound = true;
+                    break;
+                }
+            }
+        }
+        System.out.println(isFound ? "First duplicated String: " +  task2 : "There is no duplicates");
 
 
         System.out.println("\n---------Task 3--------------\n");
@@ -59,16 +80,54 @@ public class Homework09 {
             0
             -7
              */
-        int[] nums = {0, -4, -7, 0, 5, 10, 45, -7, 0};
+        int[] numbersTask3 = {0, -4, -7, 0, 5, 10, 45, -7, 0};
 
 
+        int task3 = 0;
 
+        for (int i = 0; i < numbersTask3.length; i++) {
+            for (int j = i + 1; j < numbersTask3.length; j++) {
+                if (task3 == numbersTask3[i]) continue;
+                if (numbersTask3[i] == numbersTask3[j])
+                    task3 += numbersTask3[i];
 
-
-
+            }
+        }
+        System.out.println(task3);
 
         System.out.println("\n---------Task 4--------------\n");
 
+            /*
+            Write a program to find the all duplicates in a String array,
+            ignore cases. It should print “There is no duplicates” if
+            there are no duplicate elements.
+            NOTE: Make your code dynamic that works for any given
+            String array.
+            Test data 1:
+            String[] words = {“A”, “foo”, “12” , “Foo”, “bar”, “a”, “a”, “java”};
+
+            Expected output 1:
+            A
+            foo
+             */
+
+        String[] task4 = {"A", "foo", "12" , "Foo", "bar", "a", "a", "java"};
+
+        StringBuilder counter = new StringBuilder(); // Here we will put all the duplicates
+        isFound = false;
+        for (int i = 0; i < task4.length; i++) {
+            for (int j = i + 1; j < task4.length; j++) {
+                if (counter.toString().contains(task4[i] + "")) {
+                    continue;
+                }
+                if (task4[i].equalsIgnoreCase(task4[j])) {
+                    counter.append(task4[i]);
+                    isFound = true;
+                    System.out.println(task4[i]);
+                    break;
+                }if (counter.toString().equalsIgnoreCase(task4[i]) && isFound) break;
+            }
+        }
 
         System.out.println("\n---------Task 5--------------\n");
         /*

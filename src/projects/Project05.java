@@ -139,15 +139,15 @@ public class Project05 {
        */
 
     public static void findDuplicatedElementsInAnArray(String[] str) {
-        String counter = ""; // Here we will put all the duplicates
+        StringBuilder counter = new StringBuilder(); // Here we will put all the duplicates
 
         for (int i = 0; i < str.length; i++) {
             for (int j = i + 1; j < str.length; j++) {
-                if (counter.contains(str[i] + "")) {
+                if (counter.toString().contains(str[i] + "")) {
                     break;
                 }
                 if (str[i].equals(str[j])) {
-                    counter += str[i];
+                    counter.append(str[i]);
                     System.out.println(str[i]);
                 }
             }
