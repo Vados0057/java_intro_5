@@ -64,7 +64,6 @@ public class Homework09 {
         }
         System.out.println(isFound ? "First duplicated String: " +  task2 : "There is no duplicates");
 
-
         System.out.println("\n---------Task 3--------------\n");
 
             /*
@@ -82,18 +81,16 @@ public class Homework09 {
              */
         int[] numbersTask3 = {0, -4, -7, 0, 5, 10, 45, -7, 0};
 
+        ArrayList<Integer> nums = new ArrayList<>();
 
-        int task3 = 0;
-
-        for (int i = 0; i < numbersTask3.length; i++) {
+        for (int i = 0; i < numbersTask3.length -1; i++) {
             for (int j = i + 1; j < numbersTask3.length; j++) {
-                if (task3 == numbersTask3[i]) continue;
-                if (numbersTask3[i] == numbersTask3[j])
-                    task3 += numbersTask3[i];
-
+                if (numbersTask3[i] == numbersTask3[j] && !nums.contains(numbersTask3[i]))
+                    nums.add(numbersTask3[i]);
             }
         }
-        System.out.println(task3);
+        if (nums.isEmpty()) System.out.println("There is no duplicates");
+        else nums.forEach(System.out::println);
 
         System.out.println("\n---------Task 4--------------\n");
 
@@ -113,21 +110,15 @@ public class Homework09 {
 
         String[] task4 = {"A", "foo", "12" , "Foo", "bar", "a", "a", "java"};
 
-        StringBuilder counter = new StringBuilder(); // Here we will put all the duplicates
-        isFound = false;
-        for (int i = 0; i < task4.length; i++) {
-            for (int j = i + 1; j < task4.length; j++) {
-                if (counter.toString().contains(task4[i] + "")) {
-                    continue;
-                }
-                if (task4[i].equalsIgnoreCase(task4[j])) {
-                    counter.append(task4[i]);
-                    isFound = true;
-                    System.out.println(task4[i]);
-                    break;
-                }if (counter.toString().equalsIgnoreCase(task4[i]) && isFound) break;
-            }
+        ArrayList<String> result = new ArrayList<>();
+
+        for (int i = 0; i < task4.length - 1; i++) {
+            for (int j = i + 1; j < task4.length; j++)
+                if (task4[i].equalsIgnoreCase(task4[j]) && !result.contains(task4[i].toUpperCase()))
+                    result.add(task4[i]);
         }
+        if (result.isEmpty()) System.out.println("There is no duplicates");
+        else result.forEach(System.out::println);
 
         System.out.println("\n---------Task 5--------------\n");
         /*
