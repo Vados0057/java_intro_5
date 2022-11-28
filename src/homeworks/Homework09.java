@@ -2,6 +2,7 @@ package homeworks;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
 public class Homework09 {
     public static void main(String[] args) {
@@ -135,11 +136,17 @@ public class Homework09 {
          */
         String[] words1 = {"abc", "foo", "bar"};
         String[] words2 = {"java", "python", "ruby"};
-        reverseString(words1);
-        reverseString(words2);
+//        reverseString(words1);
+//        reverseString(words2);
+
+        Collections.reverse(Arrays.asList(words1));
+        System.out.println(Arrays.toString(words1));
+
+
 
 
         System.out.println("\n---------Task 6--------------\n");
+
                 /*
                 Requirement:
         Write a program to reverse each word in a given String
@@ -176,10 +183,10 @@ public class Homework09 {
         ArrayList<String> str1 = new ArrayList<>(Arrays.asList(str.split(" ")));
         String task6 = "";
         for (String s : str1) {
-            StringBuilder newBuilder = new StringBuilder(s);
-            newBuilder.reverse();
-            task6 += newBuilder.toString()+" ";
+
+            task6 += new StringBuilder(s).reverse() + " ";
         }
-        System.out.println("Original String = " + str + "\n Reverse version = " + task6);
+        System.out.println("Original String = " + str + "\n Reverse version = " + task6.trim());
     }
+
 }
