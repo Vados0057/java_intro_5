@@ -26,19 +26,17 @@ public class Project08 {
             -The reason the result is 1 for above example is because 8 and 7 are closest
             elements in the array and the difference between them is 1.
              */
-    public static void findClosestDistance(int[] arr){
+    public static int findClosestDistance(int[] arr){
         if (arr.length < 2 ){
-            System.out.println(-1);
+            return -1;
         }
         int result = Integer.MAX_VALUE;
-        Arrays.sort(arr);
         for (int i = 0; i < arr.length-1; i++) {
-            if(Math.abs(arr[i] - arr[i+1]) < result) result= Math.abs(arr[i] - arr[i+1]);
-
-
+            for (int j = i + 1; j < arr.length; j++) {
+                if(Math.abs(arr[i] - arr[j]) < result) result= Math.abs(arr[i] - arr[j]);
+            }
         }
-        System.out.println(result > 0 ?"The closest difference in the "
-                + Arrays.toString(arr) + " is: " + result : -1);
+        return result;
     }
 
             //Task2
@@ -68,6 +66,8 @@ public class Project08 {
             if (!check.contains(arr[i])) result = arr[i];
         }
         System.out.println(result);
+
+        // add existed array to the array list, loop, if char at i == arr at[i] + 1remove
     }
 
 
@@ -89,13 +89,19 @@ public class Project08 {
             Expected output 2:
             d
                  */
-    public static void findFirstUniqueCharacter(String str){
-        
-        for (int i = 0; i < str.length(); i++) {
-            for (int j = i + 1; j < str.length()-1; j++) {
+    public static char findFirstUniqueCharacter(String str){
 
+        for (int i = 0; i < str.length(); i++) {
+            boolean check = true;
+            for (int j = 0; j < str.length(); j++) {
+            if (i != j && str.charAt(i) == str.charAt(j)) {
+                check = false;
+                break;
             }
+            }
+            if (check) return str.charAt(i);
         }
+        return ' ';
     }
 
              //Task4
@@ -115,28 +121,43 @@ public class Project08 {
             Expected output 2:
             4
                  */
+    public static void findMissingNumber(int[] arr){
+        Arrays.sort(arr);
+        int result = 0;
+        for (int i = 0; i < arr.length-1; i++) {
+            if (arr[i] - arr[i+1] != -1) result += arr[i] + 1;
+        }
+        System.out.println(result);
+    }
 
 
     public static void main(String[] args) {
 
         System.out.println("\n\t\t*Task1*\n");
-
         int[] task1a = {4, 8, 7, 15};
         int[] task1b = {10, -5, 20, 50, 100};
         int[] task1c = {4};
-        findClosestDistance(task1a);
-        findClosestDistance(task1b);
-        findClosestDistance(task1c);
+        System.out.println(findClosestDistance(task1a));
+        System.out.println(findClosestDistance(task1b));
+        System.out.println(findClosestDistance(task1c));
 
         System.out.println("\n\t\t*Task2*\n");
-
         int[] task2a = {5, 3, -1, 3, 5, 7, -1};
+        int[] task2b = {2};
         findSingleNumber(task2a);
+        findSingleNumber(task2b);
 
         System.out.println("\n\t\t*Task3*\n");
-
+        String task3a = "abc abc d";
+        String task3b = "abab";
+        String task3c = "Hello";
+        System.out.println(findFirstUniqueCharacter(task3a));
+        System.out.println(findFirstUniqueCharacter(task3b));
+        System.out.println(findFirstUniqueCharacter(task3c));
 
         System.out.println("\n\t\t*Task4*\n");
-
+        int[] task4a = {2, 3, 1, 5};
+        int[] task4b = {2, 4};
+        findMissingNumber(task4a);
     }
 }
