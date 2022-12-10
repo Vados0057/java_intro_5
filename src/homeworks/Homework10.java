@@ -35,6 +35,7 @@ public class Homework10 {
         System.out.println(removeDuplicateElements(task5));
         System.out.println(removeDuplicateElements(task5b));
 
+
         System.out.println("\n------------Task6------------\n");
         String task6 = "   I   am      learning     Java      ";
         System.out.println(removeExtraSpaces(task6));
