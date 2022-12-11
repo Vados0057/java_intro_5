@@ -17,5 +17,7 @@ public class Paragraphs {
         System.out.println("\tAs of March 2022, Java 18 is the latest version, while" +
                 "\nJava 17, 11 and 8 are the current long-term support (LTS)" +
                 "\nversions.\n");
+
+
     }
 }

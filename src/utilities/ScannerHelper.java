@@ -1,5 +1,6 @@
 package utilities;
 
+import java.text.SimpleDateFormat;
 import java.util.Scanner;
 
 public class ScannerHelper {
@@ -27,6 +28,11 @@ public class ScannerHelper {
 
         return age;
     }
+
+//    public static SimpleDateFormat getAnAge2(){
+//        System.out.println("Please enter an age:");
+//        SimpleDateFormat age;
+//    }
 
         /*
         Creating a method that asks user to enter an address and RETURN it!
