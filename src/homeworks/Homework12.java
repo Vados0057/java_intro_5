@@ -154,7 +154,6 @@ public class Homework12 {
         return arr;
     }
 
-
                 //TASK 7
                 /*
                 Requirement:
@@ -175,8 +174,10 @@ public class Homework12 {
     public static int[] arrFactorial(int[] arr){
         int[] result = new int[arr.length];
         for (int i = 0; i < arr.length; i++) {
-            if (arr[i] == 0) result[i] = 1;
-            else result[i] = arr[i] * i;
+            int first = 1;
+            for (int j = 1; j <= arr[i]; j++)
+                first *= j;
+            result[i] = first;
         }
         return result;
     }
@@ -204,7 +205,7 @@ public class Homework12 {
         for (int i = 0; i < str.length(); i++) {
             if (Character.isLetter(str.charAt(i))) result[0] += str.charAt(i);
             else if (Character.isDigit(str.charAt(i))) result[1] += str.charAt(i);
-            else if (!Character.isDigit(str.charAt(i)) && !Character.isLetter(str.charAt(i)))  result[2] += str.charAt(i);
+            else if (!Character.isWhitespace(str.charAt(i))) result[2] += str.charAt(i);
         }
         return result;
     }
