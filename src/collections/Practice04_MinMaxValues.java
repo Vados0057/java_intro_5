@@ -1,9 +1,6 @@
 package collections;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.TreeSet;
+import java.util.*;
 
 public class Practice04_MinMaxValues {
     public static void main(String[] args) {
@@ -36,7 +33,7 @@ public class Practice04_MinMaxValues {
         System.out.println("\n-----------------SECOND MAX VALUE---------------");
         System.out.println(findSecondMax(new Integer[]{10, 100, 123, 507, 25})); //123
         System.out.println(findSecondMax(new Integer[]{12})); //null
-        System.out.println(findSecondMax(new Integer[]{12,12,12,12})); //null
+        System.out.println(findSecondMax(new Integer[]{12, 12, 12, 12})); //null
         System.out.println(findSecondMax(new Integer[]{})); // null
 
         System.out.println("\n-----------------SECOND MIN VALUE---------------");
@@ -49,14 +46,14 @@ public class Practice04_MinMaxValues {
         System.out.println(nthMax(new ArrayList<>(Arrays.asList(10, 100, 123, 507, 25)),3)); //100
         System.out.println(nthMax(new ArrayList<>(Arrays.asList(10, 10, 10, 10)), 3)); //null
         System.out.println(nthMax(new ArrayList<>(Arrays.asList()), 3)); //null
-        System.out.println(nthMax(new ArrayList<>(Arrays.asList(23,25)), 3)); //null
+        System.out.println(nthMax(new ArrayList<>(Arrays.asList(23, 25)), 3)); //null
 
 
         System.out.println("\n-----------------NTH MIN---------------");
         System.out.println(nthMin(new ArrayList<>(Arrays.asList(10, 100, 123, 507, 25)),3)); //100
         System.out.println(nthMin(new ArrayList<>(Arrays.asList(10, 10, 10, 10)), 3)); //null
         System.out.println(nthMin(new ArrayList<>(Arrays.asList()), 3)); //null
-        System.out.println(nthMin(new ArrayList<>(Arrays.asList(23,25)), 3)); //null
+        System.out.println(nthMin(new ArrayList<>(Arrays.asList(23, 25)), 3)); //null
 
     }
     /*old way
