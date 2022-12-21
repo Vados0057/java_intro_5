@@ -76,6 +76,8 @@ public class Practice06_CalculateCharacters {
         2. Find the max occurrence // 3
         3. Find all the characters that has the max count, put them in a collection and return it back
          */
+
+        System.out.println("----------------------------");
         Set<Character> result = new LinkedHashSet<>();
 
         if(str == null || str.isEmpty()) return result;

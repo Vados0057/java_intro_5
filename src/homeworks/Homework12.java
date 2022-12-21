@@ -182,7 +182,6 @@ public class Homework12 {
         return result;
     }
 
-
                 //TASK 8
             /*
             Requirement:
@@ -223,7 +222,6 @@ public class Homework12 {
         System.out.println(noDigits(task1c));
         System.out.println(noDigits(task1d));
         System.out.println(noDigits(task1e));
-
 
         System.out.println("\n---------------------Task2---------------------");
         String task2a = "";
@@ -296,9 +294,5 @@ public class Homework12 {
         System.out.println(Arrays.toString(categorizeCharacters(task8a)));
         System.out.println(Arrays.toString(categorizeCharacters(task8b)));
         System.out.println(Arrays.toString(categorizeCharacters(task8c)));
-
-
-
-
     }
 }
