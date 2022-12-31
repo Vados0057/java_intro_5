@@ -27,6 +27,20 @@ public class _01_Lists {
         System.out.println(fruits.getFirst()); //Pineapple
         System.out.println(fruits.peekFirst()); //Pineapple
 
+        System.out.println("-----------");
+        System.out.println(fruits);
+
+        for (int i = 0; i < fruits.size(); i++) {
+            System.out.println(fruits.get(i));
+            System.out.println("---------");
+            System.out.println(fruits.getFirst());
+            System.out.println("--------------");
+            System.out.println(fruits.getLast());
+        }
+        System.out.println("------------");
+        for (String fruit : fruits) {
+            System.out.println(fruit);
+        }
 
         System.out.println(fruits); //
 

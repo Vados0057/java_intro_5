@@ -18,5 +18,7 @@ public class SortingArrays {
 
         System.out.println(Arrays.toString(numbers)); //[-1, 3, 5, 10]
         System.out.println(Arrays.toString(objects));//[Cup, Phone, computer, remote]
+
+
     }
 }

@@ -5,54 +5,54 @@ import java.util.*;
 public class Practice04_MinMaxValues {
     public static void main(String[] args) {
 
-    /*
-    Find the max from given numbers below
-
-    [10, 100, 123, 507, 25] -> 507
-    [12] -> 12
-    [] -> ASK WHAT THEY WANT IN THIS CASE(EXCEPTION OR NULL?) null
-     */
-
-        System.out.println("-----------------MAX VALUE---------------");
-        System.out.println(findMax(new Integer[]{10, 100, 123, 507, 25})); //507
-        System.out.println(findMax(new Integer[]{12})); //12
-        System.out.println(findMax(new Integer[]{})); // null
-
-        /*
-    Find the max from given numbers below
-
-    [10, 100, 123, 507, 25] -> 10
-    [12] -> 12
-    [] -> ASK WHAT THEY WANT IN THIS CASE(EXCEPTION OR NULL?) null
-     */
-        System.out.println("\n-----------------MIN VALUE---------------");
-        System.out.println(findMin(new Integer[]{10, 100, 123, 507, 25})); //10
-        System.out.println(findMin(new Integer[]{12})); //12
-        System.out.println(findMin(new Integer[]{})); // null
-
-        System.out.println("\n-----------------SECOND MAX VALUE---------------");
-        System.out.println(findSecondMax(new Integer[]{10, 100, 123, 507, 25})); //123
-        System.out.println(findSecondMax(new Integer[]{12})); //null
-        System.out.println(findSecondMax(new Integer[]{12, 12, 12, 12})); //null
-        System.out.println(findSecondMax(new Integer[]{})); // null
-
-        System.out.println("\n-----------------SECOND MIN VALUE---------------");
-        System.out.println(findSecondMin(new Integer[]{10, 100, 123, 507, 25})); //25
-        System.out.println(findSecondMin(new Integer[]{10, 10,10,10})); //null
-        System.out.println(findSecondMin(new Integer[]{12})); //null
-        System.out.println(findSecondMin(new Integer[]{})); // null
+//    /*
+//    Find the max from given numbers below
+//
+//    [10, 100, 123, 507, 25] -> 507
+//    [12] -> 12
+//    [] -> ASK WHAT THEY WANT IN THIS CASE(EXCEPTION OR NULL?) null
+//     */
+//
+//        System.out.println("-----------------MAX VALUE---------------");
+//        System.out.println(findMax(new Integer[]{10, 100, 123, 507, 25})); //507
+//        System.out.println(findMax(new Integer[]{12})); //12
+//        System.out.println(findMax(new Integer[]{})); // null
+//
+//        /*
+//    Find the max from given numbers below
+//
+//    [10, 100, 123, 507, 25] -> 10
+//    [12] -> 12
+//    [] -> ASK WHAT THEY WANT IN THIS CASE(EXCEPTION OR NULL?) null
+//     */
+//        System.out.println("\n-----------------MIN VALUE---------------");
+//        System.out.println(findMin(new Integer[]{10, 100, 123, 507, 25})); //10
+//        System.out.println(findMin(new Integer[]{12})); //12
+//        System.out.println(findMin(new Integer[]{})); // null
+//
+//        System.out.println("\n-----------------SECOND MAX VALUE---------------");
+//        System.out.println(findSecondMax(new Integer[]{10, 100, 123, 507, 25})); //123
+//        System.out.println(findSecondMax(new Integer[]{12})); //null
+//        System.out.println(findSecondMax(new Integer[]{12, 12, 12, 12})); //null
+//        System.out.println(findSecondMax(new Integer[]{})); // null
+//
+//        System.out.println("\n-----------------SECOND MIN VALUE---------------");
+//        System.out.println(findSecondMin(new Integer[]{10, 100, 123, 507, 25})); //25
+//        System.out.println(findSecondMin(new Integer[]{10, 10,10,10})); //null
+//        System.out.println(findSecondMin(new Integer[]{12})); //null
+//        System.out.println(findSecondMin(new Integer[]{})); // null
 
         System.out.println("\n-----------------NTH MAX---------------");
         System.out.println(nthMax(new ArrayList<>(Arrays.asList(10, 100, 123, 507, 25)),3)); //100
-        System.out.println(nthMax(new ArrayList<>(Arrays.asList(10, 10, 10, 10)), 3)); //null
-        System.out.println(nthMax(new ArrayList<>(Arrays.asList()), 3)); //null
-        System.out.println(nthMax(new ArrayList<>(Arrays.asList(23, 25)), 3)); //null
-
+//        System.out.println(nthMax(new ArrayList<>(Arrays.asList(10, 10, 10, 10)), 3)); //null
+//        System.out.println(nthMax(new ArrayList<>(Arrays.asList()), 3)); //null
+//        System.out.println(nthMax(new ArrayList<>(Arrays.asList(23, 25)), 3)); //null
+//
 
         System.out.println("\n-----------------NTH MIN---------------");
-        System.out.println(nthMin(new ArrayList<>(Arrays.asList(10, 100, 123, 507, 25)),3)); //100
-        System.out.println(nthMin(new ArrayList<>(Arrays.asList(10, 10, 10, 10)), 3)); //null
-        System.out.println(nthMin(new ArrayList<>(Arrays.asList()), 3)); //null
+//        System.out.println(nthMin(new ArrayList<>(Arrays.asList(10, 100, 123, 507, 25)),3)); //100
+//        System.out.println(nthMin(new ArrayList<>(Arrays.asList(10, 10, 10, 10)), 3)); //null
+//        System.out.println(nthMin(new ArrayList<>(Arrays.asList()), 3)); //null
         System.out.println(nthMin(new ArrayList<>(Arrays.asList(23, 25)), 3)); //null
 
     }

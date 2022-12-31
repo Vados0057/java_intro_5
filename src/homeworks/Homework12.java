@@ -71,7 +71,8 @@ public class Homework12 {
     public static int sumOfDigits(String str){
         int result = 0;
         for (int i = 0; i < str.length(); i++) {
-            if (Character.isDigit(str.charAt(i))) result += Integer.parseInt(str.substring(i, i+1));
+          //  if (Character.isDigit(str.charAt(i))) result += Integer.parseInt(str.substring(i, i+1));
+             if (Character.isDigit(str.charAt(i))) result += Character.getNumericValue(str.charAt(i));
         }
         return result;
     }
@@ -294,5 +295,7 @@ public class Homework12 {
         System.out.println(Arrays.toString(categorizeCharacters(task8a)));
         System.out.println(Arrays.toString(categorizeCharacters(task8b)));
         System.out.println(Arrays.toString(categorizeCharacters(task8c)));
+
+
     }
 }

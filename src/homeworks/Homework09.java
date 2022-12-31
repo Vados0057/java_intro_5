@@ -21,18 +21,19 @@ public class Homework09 {
         0
          */
 
-        int[] numbers = {-4, 0, -7, 0, 5, 10, 45, 45};
+        int[] numbers = {3, 4, 3, 3, 5, 5, 6, 6, 7};
 
         boolean isFound = false;
-        int task1 = 0;
-        for (int i = 0; i < numbers.length; i++) {
-            for (int j = i + 1; j < numbers.length; j++) {
-                if (numbers[i] == numbers[j] && !isFound) task1 += numbers[j];
-                isFound = true;
+
+        ArrayList<Integer> r = new ArrayList<>();
+
+        for (int number : numbers) {
+            if (r.contains(number)){
+                System.out.println(number);
                 break;
             }
+            else r.add(number);
         }
-        System.out.println(isFound ? "First duplicate number : " + task1 : "There is no duplicates");
 
 
         System.out.println("\n---------Task 2--------------\n");

@@ -1,6 +1,8 @@
 package strings;
 
 
+import java.util.HashMap;
+import java.util.Map;
 
 public class PracticeConcatenation {
     public static void main(String[] args) {
@@ -18,5 +20,14 @@ public class PracticeConcatenation {
         String mySentence = sentencePart1.concat(" ").concat(sentencePart2);
         System.out.println(mySentence);
 
+        System.out.println("------------");
+        System.out.println(reverse(sentencePart2));
+        System.out.println("-------------");
     }
+    public static String reverse(String str){
+        return new StringBuilder(str).reverse().toString();
+    }
+
+
+
 }
